@@ -3,13 +3,15 @@
 #include <algorithm>
 
 using namespace std;
+string red = "\x1b[32m";
+string reset = "\x1b[0m";
 
 int main() 
 {
-  vector<double> vect{25.2, 32.5, 15.7, 17.5, 44.7 };
+  vector<double> vect{100, 55.27, 200.78, 17.5, 144.7 };
 
   sort(vect.begin(), vect.end());
-  cout << "Sorted the Values from least to Greatest: \n";
+  cout << red << "Sorted the Values from least to Greatest: \n" << reset;
   for (auto x: vect)
     cout << x << ", ";
 
